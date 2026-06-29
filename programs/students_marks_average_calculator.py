@@ -1,32 +1,13 @@
-#Simple Login System
-def exit():
-   
-        print("GoodBye!")
+#Student Marks Average Calculator
 
-print("Welcome!")
-while True:
+subject=int(input("Enter number of subjects: "))
+index = str(subject)
+count=1
+total = 0
 
-    
-    choice = input("Type '1' to register.'2' to login.'3' to exit:")
-    if choice == "3":
-          
-        exit()
-        break
-    if choice =="1":
-         username = input("Enter a username:")
-         password = input("Enter a password:")
-         print("Account created!")
-    elif choice =="2":
-         check_username=input("Enter username:")
-         if check_username == username:
-              check_password = input("Enter your password:")
-              if check_password == password:
-                   print("Successfull login!")
-              else:
-                   print("Incorrect username or password!")
-    else:
-         print("Invalid Option!")
-         
-        
-         
-
+while count <= subject:
+    marks =int(input("Enter marks: "))
+    total=total+marks
+    count+=1
+average =round(total/subject,2)
+print(f"The total marks of the student is {total} out of {subject*100},the average marks of the student is {average}")
